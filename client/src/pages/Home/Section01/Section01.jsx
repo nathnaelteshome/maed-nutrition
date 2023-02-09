@@ -15,7 +15,7 @@ const Section01 = () => {
       <div className="right">
         <div className="head-words">
            <div className="first-line">
-          <div className="orange-word">Eattttt</div>  
+          <div className="orange-word">Eat</div>  
           <div className="normal-word">With</div>  
           </div>
           <div className="second-line">
