@@ -1,0 +1,104 @@
+.hero03-container{
+    background: url('/public/Images/section31.jpg') center center/cover no-repeat; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.05); */
+    object-fit: contain;
+}
+.left-section{
+    flex: 1;
+}
+
+
+.right-section{
+    /* background-color: rgb(127, 150, 255); */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(122, 141, 135); */
+    height: 60vh;
+    width: 500px;
+
+}
+
+
+.bg-image{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.word-color-green{
+    color: greenyellow;
+    background: linear-gradient(to right,rgb(201, 255, 120),rgb(116, 255, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left-section > h1{
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    margin-top: -100px;
+}
+
+.left-section > p{
+    margin-top: 8px;
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero03-btns{
+    /* border: 2px solid greenyellow; */
+    margin-top: 32px;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.hero03-btns .btn{
+    margin: 6px;
+}
+
+
+
+
+@media screen and (max-width :960px) {
+    .left-section > h1{
+        text-align: center;
+        font-size: 70px;
+        margin-top: -150px;
+    }
+       
+}
+@media screen and (max-width :768px) {
+    .left-section > h1{
+        text-align: center;
+        font-size: 40px;
+        margin-top: -100px;
+    }
+    .left-section > p{
+        font-size: 30px;
+    }
+    .right-section{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+         
+}
+

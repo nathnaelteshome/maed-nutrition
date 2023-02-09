@@ -1,0 +1,107 @@
+
+.presentation{
+    position: relative;
+    // background: rgb(149, 255, 0);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .left{
+        width: 50%;
+        // background-color: rgb(19, 97, 97);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header{
+            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: var(--step-5);
+                line-height: 151%;
+            }
+            h1.normal-word{
+                font-weight: 400;
+            }
+            h1.orange-word{
+                width: fit-content;
+                text-transform: capitalize;
+                margin-right: 5px;
+                color: #FFB11B;
+            }
+            p{
+                font-size: var(--step-0);
+                font-weight: 400;
+                line-height: 26px;
+            }
+            
+        
+            }
+        
+        
+            .buttons{
+                font-size:var(--step--1);
+                margin-top: 50px;
+                margin-bottom: 100px;
+                min-width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                width: 20%;
+                // background-color: green;
+                .btn{
+                    font-weight: 500;
+                }
+               
+            }
+    }
+    .right {
+        // background-color: rgb(40, 6, 6);
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+            margin-top: -270px;
+            // background-color: rgb(225, 156, 156);
+            
+        }
+    }
+   
+
+    }
+    
+    @media screen and (max-width :960px) {
+        .presentation {
+        //    height: 100vh;
+           width: 100%;
+           flex-direction: column;
+           .left{
+            order: 2;
+            
+            width: 100%;
+            .buttons{
+                min-width: 70%;
+            }
+            .btn{
+                font-size: 10px;
+                
+               }
+               
+           }
+           .right{
+            order: 1;
+            width: 100%;
+            img{
+                width: 80%;
+                margin-top: 0;
+                
+            }
+           }
+        }
+    }
+    

@@ -1,0 +1,110 @@
+:root{
+  --primary:#FF7403;
+  --secondary: #244f26;
+  --tertiary: #FFB11B;
+  --quaternary:#1dbe24;
+}
+
+.btn{
+  padding: 8px 20px;
+  border-radius: 255px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn--primary {
+    background-color: var(--primary);
+    color: #f1f1f1;
+    border: 1px solid var(--primary);
+  }
+  
+  .btn--secondary {
+    background-color: var(--secondary);
+    color: #f1f1f1;
+    border: 1px solid var(--secondary);
+  }
+  
+  .btn--tertiary {
+    background-color: var(--tertiary);
+    color: #f1f1f1;
+    border: 1px solid var(--tertiary);
+  }
+
+  .btn--quaternary {
+    background-color: var(--quaternary);
+    color: #f1f1f1;
+    border: 1px solid var(--quaternary);
+  }
+  
+  .btn--outline-primary {
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    }
+  .btn--outline-secondary {
+    background-color: transparent;
+    color: var(--secondary);
+    padding: 8px 20px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s ease-out;
+    }
+    
+    
+    
+    .btn--medium {
+        padding: 8px 20px;
+        font-size: 18px;
+      }
+      
+    .btn--large {
+    padding: 12px 26px;
+    font-size: 20px;
+    }
+  
+ 
+  .btn--primary:hover 
+  {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #FF7403;
+    transition: 250ms;
+  }
+  .btn--secondary:hover 
+  {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #3F9629;
+    transition: 250ms;
+  }
+  .btn--tertiary:hover 
+  {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #FFB11B;
+    transition: 250ms;
+  }
+  .btn--quaternary:hover 
+  {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #1dbe24;
+    transition: 250ms;
+  }
+
+.btn--outline-secondary:hover {
+  transition: all 0.3s ease-out;
+  background: #1dbe24;
+  outline: #1dbe24;
+  border: 1px solid #1dbe24;
+  color: #fff;
+  transition: 250ms;
+}
+.btn--outline-primary:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #FF7403;
+  transition: 250ms;
+}
