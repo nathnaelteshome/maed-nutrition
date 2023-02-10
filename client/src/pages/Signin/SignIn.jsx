@@ -1,107 +1,52 @@
-// import { useRef, useState, useEffect, useContext } from 'react';
-// import AuthContext from "./context/AuthProvider";
+import React from 'react';
+import 'SignIn.scss'
 
-// import axios from '../../api/axios';
-// const LOGIN_URL = '/auth';
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+}
+from 'mdb-react-ui-kit';
 
-// const SignIn = () => {
-//     const { setAuth } = useContext(AuthContext);
-//     const userRef = useRef();
-//     const errRef = useRef();
+function SignIn() {
+  return (
+    <MDBContainer fluid>
+      <MDBRow>
 
-//     const [user, setUser] = useState('');
-//     const [pwd, setPwd] = useState('');
-//     const [errMsg, setErrMsg] = useState('');
-//     const [success, setSuccess] = useState(false);
+        <MDBCol sm='6'>
 
-//     useEffect(() => {
-//         userRef.current.focus();
-//     }, [])
+          <div className='d-flex flex-row ps-5 pt-5'>
+            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+            <span className="h1 fw-bold mb-0">Logo</span>
+          </div>
 
-//     useEffect(() => {
-//         setErrMsg('');
-//     }, [user, pwd])
+          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
 
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
+            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
 
-//         try {
-//             const response = await axios.post(LOGIN_URL,
-//                 JSON.stringify({ user, pwd }),
-//                 {
-//                     headers: { 'Content-Type': 'application/json' },
-//                     withCredentials: true
-//                 }
-//             );
-//             console.log(JSON.stringify(response?.data));
-//             //console.log(JSON.stringify(response));
-//             const accessToken = response?.data?.accessToken;
-//             const roles = response?.data?.roles;
-//             setAuth({ user, pwd, roles, accessToken });
-//             setUser('');
-//             setPwd('');
-//             setSuccess(true);
-//         } catch (err) {
-//             if (!err?.response) {
-//                 setErrMsg('No Server Response');
-//             } else if (err.response?.status === 400) {
-//                 setErrMsg('Missing Username or Password');
-//             } else if (err.response?.status === 401) {
-//                 setErrMsg('Unauthorized');
-//             } else {
-//                 setErrMsg('Login Failed');
-//             }
-//             errRef.current.focus();
-//         }
-//     }
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
 
-//     return (
-//         <>
-//             {success ? (
-//                 <section>
-//                     <h1>You are logged in!</h1>
-//                     <br />
-//                     <p>
-//                         <a href="#">Go to Home</a>
-//                     </p>
-//                 </section>
-//             ) : (
-//                 <section>
-//                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-//                     <h1>Sign In</h1>
-//                     <form onSubmit={handleSubmit}>
-//                         <label htmlFor="username">Username:</label>
-//                         <input
-//                             type="text"
-//                             id="username"
-//                             ref={userRef}
-//                             autoComplete="off"
-//                             onChange={(e) => setUser(e.target.value)}
-//                             value={user}
-//                             required
-//                         />
+            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
+            <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
+            <p className='ms-5'>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
 
-//                         <label htmlFor="password">Password:</label>
-//                         <input
-//                             type="password"
-//                             id="password"
-//                             onChange={(e) => setPwd(e.target.value)}
-//                             value={pwd}
-//                             required
-//                         />
-//                         <button>Sign In</button>
-//                     </form>
-//                     <p>
-//                         Need an Account?<br />
-//                         <span className="line">
-//                             {/*put router link here*/}
-//                             <a href="#">Sign Up</a>
-//                         </span>
-//                     </p>
-//                 </section>
-//             )}
-//         </>
-//     )
-// }
+          </div>
 
-// export default SignIn
+        </MDBCol>
+
+        <MDBCol sm='6' className='d-none d-sm-block px-0'>
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
+        </MDBCol>
+
+      </MDBRow>
+
+    </MDBContainer>
+  );
+}
+
+export default SignIn;
